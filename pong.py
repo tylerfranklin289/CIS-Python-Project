@@ -21,7 +21,7 @@ paddle_height = 100
 ball_size = 15
 
 #speed, adjust for difficulty
-PADDLE_SPEED = 5
+paddle_speed = 5
 ball_speed_X = 4
 ball_speed_Y = 4
 
@@ -56,13 +56,13 @@ while running:
     #controls
     keys = pygame.key.get_pressed()
     if keys[pygame.K_w] and player1_paddle.top > 0:
-        player1_paddle.y -= PADDLE_SPEED
+        player1_paddle.y -= paddle_speed
     if keys[pygame.K_s] and player1_paddle.bottom < screen_height:
-        player1_paddle.y += PADDLE_SPEED
+        player1_paddle.y += paddle_speed
     if keys[pygame.K_UP] and player2_paddle.top > 0:
-        player2_paddle.y -= PADDLE_SPEED
+        player2_paddle.y -= paddle_speed
     if keys[pygame.K_DOWN] and player2_paddle.bottom < screen_height:
-        player2_paddle.y += PADDLE_SPEED
+        player2_paddle.y += paddle_speed
 
     #ball movement with edge
     ball.x += ball_dx
