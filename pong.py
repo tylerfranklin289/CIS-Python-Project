@@ -14,16 +14,16 @@ white = (255, 255, 255)
 black = (0, 0, 0)
 
 #paddle
-paddle_width = 10
-paddle_height = 100
+paddle_width = 15
+paddle_height = 110
 
 
 ball_size = 15
 
-#speed, adjust for difficulty
-paddle_speed = 5
-ball_speed_X = 4
-ball_speed_Y = 4
+#speed, adjust for difficulty, I suggest matching x and y ball speeds, keep paddle speed +1 or 2 faster
+paddle_speed = 8
+ball_speed_X = 6
+ball_speed_Y = 6
 
 
 screen = pygame.display.set_mode((screen_width, screen_height))
@@ -75,7 +75,7 @@ while running:
     #ball collision 
     if ball.colliderect(player1_paddle) or ball.colliderect(player2_paddle):
         ball_dx = -ball_dx
-##    ai
+##    ai WIP
 ##    def player2_ai():
 ##        if player2_paddle.top < ball.y:
 ##            player2_paddle.top += player2_speed
